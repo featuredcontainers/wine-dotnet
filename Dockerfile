@@ -4,9 +4,10 @@ RUN apt-get update && \
     apt-get install -y ca-certificates jq curl wget unzip zip python3-pip \
       wine && \
     rm -rf /var/lib/apt/lists/* && \
-    wget -O /tmp/dotnet.zip  && \
+    wget -O /tmp/dotnet.zip "$DOTNET_ARCHIVE"  && \
     mkdir /dotnet && \
     unzip -d /dotnet /tmp/dotnet.zip && \
-    rm /tmp/dotnet.zip
+    rm /tmp/dotnet.zip && \
+    wine /dotnet/dotnet.exe
 
 ENTRYPOINT [ "/bin/bash" ]
