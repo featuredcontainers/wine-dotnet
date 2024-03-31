@@ -8,6 +8,6 @@ RUN apt-get update && \
     mkdir /dotnet && \
     unzip -d /dotnet /tmp/dotnet.zip && \
     rm /tmp/dotnet.zip && \
-    wine /dotnet/dotnet.exe
+    wine /dotnet/dotnet.exe --info
 
 ENTRYPOINT [ "/bin/bash" ]
