@@ -9,5 +9,3 @@ RUN apt-get update && \
     unzip -d /dotnet /tmp/dotnet.zip && \
     rm /tmp/dotnet.zip && \
     wine /dotnet/dotnet.exe --info
-
-ENTRYPOINT [ "/bin/bash" ]
